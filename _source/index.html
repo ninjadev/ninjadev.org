@@ -1,0 +1,134 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ninjadev</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html, body {
+      background: #efefef;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    }
+
+    p {
+      line-height: 1.4;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 1.4em;
+    }
+
+    .header {
+      background: #1d3459;
+      margin-bottom: 30px;
+    }
+
+    .header .logo {
+      display: block;
+      height: 100px;
+      margin: 0 auto;
+      padding: 50px 0 35px;
+    }
+
+    .demo {
+      max-width: 580px;
+      margin: 0 auto 30px;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .aspect-16-9 {
+      position: relative;
+      padding: 0 0 56.25%;
+      height: 0;
+      width: 100%;
+    }
+
+    .demo iframe {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .demo .title-bar {
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .demo .title-bar .party {
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    .demo .title-bar .type {
+      float: right;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    .demo .links .link {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+         class="logo"
+         src="ninjadev.svg"
+         />
+    </div>
+
+    {% for post in site.posts %}
+      <div class="demo">
+        <div class="aspect-16-9">
+          <iframe
+            src="{{ post.embed }}"
+            frameborder="0"
+            allowfullscreen
+            >
+          </iframe>
+        </div>
+        <div class="title-bar">
+          <div class="type">
+            {{ post.type }}
+          </div>
+          <div class="title">
+            {{ post.title }}
+          </div>
+          <div class="by">
+            by {{ post.by }}
+          </div>
+          <div class="party">
+            {{ post.party }}
+          </div>
+        </div>
+        <div>
+          {{ post.content }}
+        </div>
+        <div class="links">
+          {% for link in post.links %}
+            <a
+             class="link {{ link[0] }}"
+             href="{{ link[1].url }}"
+             >
+             {{ link[1].name }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </body>
+</html>
