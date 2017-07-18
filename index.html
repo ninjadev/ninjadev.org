@@ -14,7 +14,13 @@
 
     html, body {
       background: #efefef;
+      background: #1d3459;
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    }
+
+    @keyframes scroll {
+        from { transform: translate3d(0px, 0px, 0px); }
+        to { transform: translate3d(0px, -200px, 0px); }
     }
 
     p {
@@ -26,6 +32,42 @@
     .header {
       background: #1d3459;
       margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header .overlay {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAACo0lEQVQ4TyWPcWhNURzHv5FIZK0x77177n2btbW21t47594307JIWGZod++ee5+N6IU1iWjR8lq0iBYtWiRaRIsWLRLRokWLFi2iRSLRIlq0iL57949v5/zO9/f9fC/AL5PJzADgzoSU6VkApWht22xEo1vmICzTcxGW9XNRVrtrHvJK1s9HoXQXIKdyQw6MpW4ujDI3F8VS52FxzF2IgoTOx6JynQ9LpkIQMS+MSCIwEKkIDBTKZhOhmG/BcjYXIN9xCyCqW5bAiLtFKHSaixFWbgmsqmQpQvFkKUxbl0GoZDmTK2DEdQWitl+JsPJiMBO+RCjuSwg7sGEo30E0EVQhEk9WwbJT1QirpmUQTqoGIu7VIGrr5TCUVwvL0SsQiXkrYSq9KivC8VeTsQaW8uuYVwfTCdYhHNf1EMpvYJcGWE6wEUY8uQmmChoRUV4jmzaRkYRQWsOQns9ZinkpmMpvRkTqFghbb82K5fjbYEi9Habtp2HYXhrCCXZAyOROCBW0QiivFaaj25i3myX3IEIRjt4LIfU+WErvh6H0AdLamdfOpgdZ4xAs2++AkF4HGxzmn2cgbL8TEel10nKEjKPc7eJuFxnHmHecJU+QcZKzbpq72fQUfafJ6OFuD/POkHGWjF4yepl3jp3Pc+1CVkxbX+TpEk99ZPRx9zJnV3i6Sto10vqZ0s/ZdabcIG2AtAHu3uTsFn2DTBlk09vcvcOou1kxbf8em97n9QF9D+kbYtMhNn1ExmMyhpk3TN8TMp6SMcK8ETKecfc5X0eZN8rTC8pLvo7RN8a8V8x7zaZvyHjL2Tjzxul7x9f3bPCBu9PykfKJtM88TcsX0r7SN8HrBFO+8fSdf/SDTX+SMcnkSfp+kfabjCn6pjj7w6Z/ef33H4e66GgjMqP/AAAAAElFTkSuQmCC);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      transform: translate3d(0px, 0px, 1px);
+    }
+
+    .header canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 410px;
+      margin-top: -5px;
+    }
+
+    .header .canvas-0 {
+      animation: scroll 20.25s infinite linear;
+    }
+    .header .canvas-1 {
+      animation: scroll 13.5s infinite linear;
+    }
+    .header .canvas-2 {
+      animation: scroll 9s infinite linear;
+    }
+    .header .canvas-3 {
+      animation: scroll 6s infinite linear;
     }
 
     .header .logo {
@@ -33,10 +75,11 @@
       height: 100px;
       margin: 0 auto;
       padding: 50px 0 35px;
+      transform: translate3d(0px, 0px, 2px);
     }
 
     .demo {
-      max-width: 580px;
+      max-width: 520px;
       margin: 0 auto 30px;
       background: #fff;
       padding: 15px;
@@ -85,6 +128,7 @@
   </head>
   <body>
     <div class="header">
+      <div class="overlay"></div>
       <img
          class="logo"
          src="ninjadev.svg"
@@ -130,5 +174,6 @@
         </div>
       </div>
     {% endfor %}
+    <script src="header.js"></script>
   </body>
 </html>
