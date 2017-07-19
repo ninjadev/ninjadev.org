@@ -94,12 +94,7 @@
     {% for post in site.posts %}
       <div class="demo">
         <div class="aspect-16-9">
-          <iframe
-            src="{{ post.embed }}"
-            frameborder="0"
-            allowfullscreen
-            >
-          </iframe>
+          {% include embed.html %}
         </div>
         <div class="title-bar">
           <div class="type">

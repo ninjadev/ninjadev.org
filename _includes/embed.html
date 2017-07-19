@@ -1,0 +1,8 @@
+{% if post.embed.type == "youtube" %}
+  <iframe
+    src="https://www.youtube.com/embed/{{ post.embed.id }}?controls=2&rel=0&showinfo=0&widget_referrer=ninjadev.org"
+    frameborder="0"
+    allowfullscreen
+    >
+  </iframe>
+{% endif %}
