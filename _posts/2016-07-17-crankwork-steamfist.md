@@ -1,6 +1,6 @@
 ---
 type: js demo
-title: Crankwork Steamfist
+title: '"Crankwork Steamfist"'
 by: Ninjadev
 party: Solskogen 2016
 embed:
@@ -21,4 +21,4 @@ links:
       name: Online
 ---
 
-Yo!
+Travel through the wonderful mind of Dr. Crankwork Steamfist.
