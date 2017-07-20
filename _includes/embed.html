@@ -14,3 +14,9 @@
     >
   </iframe>
 {% endif %}
+{% if post.embed.type == "image" %}
+  <img
+    src="{{ post.embed.url }}"
+    style="width: 100%"
+    >
+{% endif %}
