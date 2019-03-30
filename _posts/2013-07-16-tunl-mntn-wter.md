@@ -5,7 +5,7 @@ by: Ninjadev
 party: Solskogen 2013
 embed:
     type: youtube
-    id: VFh7AuDcslQ
+    id: x65kLjzgDwY
 links:
     pouet:
       url: http://www.pouet.net/prod.php?which=61584
