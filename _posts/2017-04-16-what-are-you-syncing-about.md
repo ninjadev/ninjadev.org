@@ -17,7 +17,7 @@ links:
       url: https://soundcloud.com/ninjadev-music/what-are-you-syncing-about
       name: Music
     online:
-      url: https://ninjadev.org/what-are-you-syncing-about
+      url: https://stianj.com/what-are-you-syncing-about/
       name: Online
 ---
 
