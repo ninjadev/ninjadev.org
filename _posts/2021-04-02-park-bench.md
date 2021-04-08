@@ -8,4 +8,4 @@ embed:
     url: assets/images/park-bench.jpg
 ---
 
-7th place at Solskogen 2020.
+7th place at Revision 2020.
