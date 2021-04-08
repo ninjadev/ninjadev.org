@@ -9,4 +9,4 @@ embed:
 
 ---
 
-16th place at Solskogen 2020.
+16th place at Revision 2021.
