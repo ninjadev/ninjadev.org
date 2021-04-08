@@ -1,22 +1,32 @@
-{% if post.embed.type == "youtube" %}
-  <iframe
-    src="https://www.youtube.com/embed/{{ post.embed.id }}?controls=2&rel=0&showinfo=0&widget_referrer=ninjadev.org"
-    frameborder="0"
-    allowfullscreen
-    >
-  </iframe>
-{% endif %}
-{% if post.embed.type == "soundcloud" %}
-  <iframe
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ post.embed.id }}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
-    frameborder="0"
-    allowfullscreen
-    >
-  </iframe>
-{% endif %}
-{% if post.embed.type == "image" %}
-  <img
-    src="{{ post.embed.url }}"
-    style="width: 100%"
-    >
+{% if post.embed.type == "soundcloud" %
+<iframe
+  width="100%"
+  height="292"
+  scrolling="no"
+  frameborder="no"
+  allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{
+    post.embed.id
+  }}&color=%231d3459&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+></iframe>
+{% endif %} {% if post.embed.type == "youtube" %}
+<iframe
+  src="https://www.youtube.com/embed/{{
+    post.embed.id
+  }}?controls=2&rel=0&showinfo=0&widget_referrer=ninjadev.org"
+  frameborder="0"
+  allowfullscreen
+>
+</iframe>
+{% endif %} {% if post.embed.type == "soundcloud" %}
+<iframe
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{
+    post.embed.id
+  }}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
+  frameborder="0"
+  allowfullscreen
+>
+</iframe>
+{% endif %} {% if post.embed.type == "image" %}
+<img src="{{ post.embed.url }}" style="width: 100%" />
 {% endif %}
