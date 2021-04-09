@@ -13,4 +13,4 @@ links:
 
 ---
 
-4th place at Solskogen 2020.
+1st place at Solskogen 2020 Wild Compo.
