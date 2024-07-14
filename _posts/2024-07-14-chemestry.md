@@ -17,4 +17,4 @@ links:
 
 Music: Planeswalker by Bitbear
 
-2st place at Black Valley 2024.
+2nd place at Black Valley 2024.
