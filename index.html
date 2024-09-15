@@ -41,7 +41,7 @@
       background: #1d3459;
       position: relative;
       overflow: hidden;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       text-align: center;
       color: white;
     }
@@ -93,6 +93,13 @@
       margin: 0 auto;
       padding: 50px 0 35px;
       transform: translate3d(0px, 0px, 2px);
+    }
+
+    .external-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 30px;
     }
 
     .demo {
@@ -155,6 +162,33 @@
       <div class="tagline">
         A loosely-coupled hacker's collective.
       </div>
+    </div>
+
+    <div class="external-links">
+      <a href="https://github.com/ninjadev/">
+        <img
+          src="/assets/images/github.svg"
+          alt="GitHub"
+          width="20"
+          height="20"
+        />
+      </a>
+      <a href="https://www.pouet.net/groups.php?which=11702">
+        <img
+          src="/assets/images/pouet.svg"
+          alt="Pouet"
+          width="20"
+          height="20"
+        />
+      </a>
+      <a href="https://www.youtube.com/@ninjadev_demos">
+        <img
+          src="/assets/images/youtube.svg"
+          alt="Pouet"
+          width="20"
+          height="20"
+        />
+      </a>
     </div>
 
     {% for post in site.posts %}
